@@ -1,4 +1,6 @@
 Basic Wandbox API Wrapper
+# Install
+npm i wandboxjs
 
 # Example
 ```js
