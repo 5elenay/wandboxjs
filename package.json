@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "name": "wandboxjs",
+  "version": "1.0.1",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "abcdef",
+  "license": "MIT",
+  "description": "Basic wandbox api wrapper."
+}
