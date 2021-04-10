@@ -145,7 +145,11 @@ const compiler = async(lang, code) => {
         vimscript: {
             "compiler": "vim-8.0.0671",
             "options": ""
-        }
+        },
+	bash: {
+	    "compiler": "bash",
+	    "options": ""
+	}
 	}
 	
 	const body = {
