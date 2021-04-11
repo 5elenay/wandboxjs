@@ -3,14 +3,26 @@ const fetch = require("node-fetch")
 const compiler = async (lang, code) => {
     const langs = {
         cpp: {
-            "compiler": "gcc-10.1.0",
-            "options": "warning,boost-1.73.0-gcc-head,gnu++2b,cpp-no-pedantic"
+            "compiler": "gcc-9.2.0",
+            "options": "warning,boost-1.73.0-gcc-9.2.0,gnu++2a,cpp-no-pedantic"
+        },
+        "c++": {
+            "compiler": "gcc-9.2.0",
+            "options": "warning,boost-1.73.0-gcc-9.2.0,gnu++2a,cpp-no-pedantic"
         },
         c: {
             "compiler": "gcc-10.1.0-c",
             "options": "warning,gnu11,cpp-no-pedantic"
         },
         csharp: {
+            "compiler": "mono-5.8.0.108",
+            "options": ""
+        },
+        cs: {
+            "compiler": "mono-5.8.0.108",
+            "options": ""
+        },
+        "c#": {
             "compiler": "mono-5.8.0.108",
             "options": ""
         },
@@ -38,7 +50,15 @@ const compiler = async (lang, code) => {
             "compiler": "fsharp-4.1.34",
             "options": ""
         },
+        "f#": {
+            "compiler": "fsharp-4.1.34",
+            "options": ""
+        },
         go: {
+            "compiler": "go-1.14.2",
+            "options": ""
+        },
+        golang: {
             "compiler": "go-1.14.2",
             "options": ""
         },
@@ -55,6 +75,10 @@ const compiler = async (lang, code) => {
             "options": ""
         },
         javascript: {
+            "compiler": "nodejs-14.0.0",
+            "options": ""
+        },
+        js: {
             "compiler": "nodejs-14.0.0",
             "options": ""
         },
@@ -102,11 +126,11 @@ const compiler = async (lang, code) => {
             "compiler": "pony-0.14.0",
             "options": ""
         },
-        pony: {
-            "compiler": "pony-0.14.0",
+        python: {
+            "compiler": "cpython-3.8.0",
             "options": ""
         },
-        python: {
+        py: {
             "compiler": "cpython-3.8.0",
             "options": ""
         },
@@ -130,6 +154,10 @@ const compiler = async (lang, code) => {
             "compiler": "sqlite-3.19.3",
             "options": ""
         },
+        sql: {
+            "compiler": "sqlite-3.19.3",
+            "options": ""
+        },
         scala: {
             "compiler": "scala-2.12.2",
             "options": ""
@@ -142,11 +170,19 @@ const compiler = async (lang, code) => {
             "compiler": "typescript-3.9.5",
             "options": ""
         },
+        ts: {
+            "compiler": "typescript-3.9.5",
+            "options": ""
+        },
         vimscript: {
             "compiler": "vim-8.0.0671",
             "options": ""
         },
         bash: {
+            "compiler": "bash",
+            "options": ""
+        },
+        sh: {
             "compiler": "bash",
             "options": ""
         }
