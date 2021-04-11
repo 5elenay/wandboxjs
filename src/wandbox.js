@@ -220,7 +220,7 @@ const compiler = async (lang, code) => {
     let compiled = await res.text().catch(e => e);;
     let splitted = compiled.split("\n");
     const end = splitted.findIndex(i => i.includes("data: ExitCode"));
-    let result = splitted.slice(5, end - 4).filter(i => (!i.includes("\r"))).join("\n").replace(/(data: |data:|StdOut:|StdErr:|\\n)/g, "").split("\n").filter(i => i !== "" && i !== "\r").join("\n");
+    let result = splitted.slice(5, end - 3).filter(i => (!i.includes("\r"))).join("\n").replace(/(data: |data:|StdOut:|StdErr:|\\n)/g, "").split("\n").filter(i => i !== "" && i !== "\r").join("\n");
     return result;
 }
 
